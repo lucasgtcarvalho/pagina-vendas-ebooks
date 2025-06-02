@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Placeholder Stack Image</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        .book-stack {
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+        .stacked-book {
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .book-1 {
+            transform: rotate(-15deg) translateX(-30px);
+            z-index: 1;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .book-2 {
+            transform: rotate(-5deg) translateX(-10px);
+            z-index: 2;
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+        .book-3 {
+            transform: rotate(0deg);
+            z-index: 3;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .book-4 {
+            transform: rotate(5deg) translateX(10px);
+            z-index: 4;
+            background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+        }
+        .book-5 {
+            transform: rotate(15deg) translateX(30px);
+            z-index: 5;
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+        }
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d3748;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .book-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .package-label {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="book-stack">
+        <div class="package-label">PACOTE COMPLETO</div>
+        <div class="stacked-book book-1">
+            <div class="book-icon">📚</div>
+            <div class="book-title">Aprendizado Contínuo</div>
+        </div>
+        <div class="stacked-book book-2">
+            <div class="book-icon">💰</div>
+            <div class="book-title">Finanças Inteligentes</div>
+        </div>
+        <div class="stacked-book book-3">
+            <div class="book-icon">🤖</div>
+            <div class="book-title">Humano na Era da IA</div>
+        </div>
+        <div class="stacked-book book-4">
+            <div class="book-icon">💼</div>
+            <div class="book-title">Mentalidade Empreendedora</div>
+        </div>
+        <div class="stacked-book book-5">
+            <div class="book-icon">🔒</div>
+            <div class="book-title">Segurança Financeira Digital</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book Template</title>
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        button {
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #2575fc;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #6a11cb;
+            text-decoration: underline;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .book-cover {
+            width: 300px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .book-cover:hover {
+            transform: translateY(-10px);
+        }
+        
+        .package-price {
+            margin: 20px 0;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 1.2rem;
+        }
+        
+        .discount-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2575fc;
+            margin: 10px 0;
+        }
+        
+        .discount-badge {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .cta-button.large {
+            padding: 18px 36px;
+            font-size: 1.4rem;
+        }
+        
+        .cta-button.secondary {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            margin-left: 15px;
+        }
+        
+        .guarantee {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+        
+        .guarantee-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        /* Package Offer Section */
+        .package-offer {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .package-offer .container {
+            max-width: 800px;
+        }
+        
+        .package-offer h2 {
+            margin-bottom: 30px;
+        }
+        
+        .package-offer p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                flex: none;
+                width: 100%;
+            }
+            
+            .hero-image {
+                height: 300px;
+                margin-top: 30px;
+            }
+            
+            .book-cover {
+                width: 200px;
+            }
+            
+            .cta-button.secondary {
+                margin-left: 0;
+                margin-top: 15px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <h1>Segurança Financeira Digital</h1>
+            <p class="subtitle">Protegendo seus Ativos no Mundo Virtual</p>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transforme sua vida com conhecimento prático</h2>
+                <p>Descubra como aplicar estratégias eficientes para protegendo seus ativos no mundo virtual e alcançar resultados extraordinários em sua jornada pessoal e profissional.</p>
+                
+                <div class="package-price">
+                    <div class="original-price">De R$ 47,00 por apenas</div>
+                    <div class="discount-price">R$ 37.00 <span class="discount-badge">21% OFF</span></div>
+                </div>
+                
+                <a href="https://pay.hotmart.com/H100023495U" class="cta-button large">COMPRAR AGORA</a>
+                <a href="index.html" class="cta-button secondary">VER PACOTE COMPLETO</a>
+                
+                <div class="guarantee">
+                    <span class="guarantee-icon">✓</span>
+                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="seguranca-digital.png" alt="Segurança Financeira Digital" class="book-cover">
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">O que você vai aprender</h2>
+            <p class="section-subtitle">Conteúdo prático e aplicável para resultados reais</p>
+            
+            <div class="features-grid">
+                
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Proteção contra fraudes financeiras online</h3>
+            <p>Aprenda estratégias práticas e eficientes para implementar este conhecimento em sua vida diária.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">Segurança de dados pessoais e bancários</h3>
+            <p>Aprenda estratégias práticas e eficientes para implementar este conhecimento em sua vida diária.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3 class="feature-title">Investimentos digitais seguros</h3>
+            <p>Aprenda estratégias práticas e eficientes para implementar este conhecimento em sua vida diária.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3 class="feature-title">Gestão de senhas e autenticação</h3>
+            <p>Aprenda estratégias práticas e eficientes para implementar este conhecimento em sua vida diária.</p>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <section class="package-offer">
+        <div class="container">
+            <h2>Potencialize seus resultados com o pacote completo</h2>
+            <p>Adquira nossa coleção completa de 5 e-books e economize mais de 40%!</p>
+            <a href="index.html" class="cta-button large">CONHECER O PACOTE COMPLETO</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Produtos Digitais Premium. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

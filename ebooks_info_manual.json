@@ -1,0 +1,67 @@
+[
+    {
+        "id": "aprendizado-continuo",
+        "title": "Aprendizado Contínuo",
+        "description": "Estratégias para Desenvolvimento Pessoal na Era Digital",
+        "price": 37.0,
+        "features": [
+            "Técnicas de aprendizado acelerado",
+            "Como criar rotinas de estudo eficientes",
+            "Ferramentas digitais para potencializar o aprendizado",
+            "Mindset de crescimento contínuo"
+        ],
+        "buy_link": "https://pay.hotmart.com/M100023520Y"
+    },
+    {
+        "id": "financas-inteligentes",
+        "title": "Finanças Inteligentes",
+        "description": "Como Usar IA para Organizar seu Dinheiro",
+        "price": 37.0,
+        "features": [
+            "Ferramentas de IA para controle financeiro",
+            "Estratégias de investimento automatizado",
+            "Planejamento financeiro com tecnologia",
+            "Economia e poupança inteligente"
+        ],
+        "buy_link": "https://pay.hotmart.com/R100023269F"
+    },
+    {
+        "id": "humano-ia",
+        "title": "Humano na Era da IA",
+        "description": "Como se Destacar em um Mundo Automatizado",
+        "price": 37.0,
+        "features": [
+            "Habilidades humanas insubstituíveis",
+            "Como trabalhar em parceria com a IA",
+            "Desenvolvimento de soft skills essenciais",
+            "Carreira e empregabilidade no futuro"
+        ],
+        "buy_link": "https://pay.hotmart.com/G100023563Q"
+    },
+    {
+        "id": "mentalidade-empreendedora",
+        "title": "Mentalidade Empreendedora",
+        "description": "Desenvolvendo uma Visão de Negócios",
+        "price": 37.0,
+        "features": [
+            "Mindset do empreendedor de sucesso",
+            "Identificação de oportunidades de mercado",
+            "Gestão de riscos e tomada de decisão",
+            "Planejamento estratégico para novos negócios"
+        ],
+        "buy_link": "https://pay.hotmart.com/I100023545C"
+    },
+    {
+        "id": "seguranca-digital",
+        "title": "Segurança Financeira Digital",
+        "description": "Protegendo seus Ativos no Mundo Virtual",
+        "price": 37.0,
+        "features": [
+            "Proteção contra fraudes financeiras online",
+            "Segurança de dados pessoais e bancários",
+            "Investimentos digitais seguros",
+            "Gestão de senhas e autenticação"
+        ],
+        "buy_link": "https://pay.hotmart.com/H100023495U"
+    }
+]
